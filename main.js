@@ -14,30 +14,37 @@ const playRound = (playerSelection, computerSelection) => {
 	if (playerSelection === computerSelection) {
 		const p = document.createElement("p");
 		p.innerText = `You tied! You both picked ${playerSelection}`;
+		outcomeDiv.appendChild(p);
 	} else if (playerSelection === "scissors" && computerSelection === "rock") {
 		compScore++;
 		const p = document.createElement("p");
 		p.innerText = "You lost! Rock crushes scissors";
+		outcomeDiv.appendChild(p);
 	} else if (playerSelection === "scissors" && computerSelection === "paper") {
 		playerscore++;
 		const p = document.createElement("p");
 		p.innerText = "You won! Scissors cuts paper";
+		outcomeDiv.appendChild(p);
 	} else if (playerSelection === "rock" && computerSelection === "paper") {
 		compScore++;
 		const p = document.createElement("p");
 		p.innterText = "You lost! Paper covers rock";
+		outcomeDiv.appendChild(p);
 	} else if (playerSelection === "rock" && computerSelection === "scissors") {
 		playerScore++;
 		const p = document.createElement("p");
 		p.innterText = "You won! Rock crushed scissors";
+		outcomeDiv.appendChild(p);
 	} else if (playerSelection === "paper" && computerSelection === "scissors") {
 		compScore++;
 		const p = document.createElement("p");
 		p.innerText = "You lost! Scissors cuts paper";
+		outcomeDiv.appendChild(p);
 	} else if (playerSelection === "paper" && computerSelection === "rock") {
 		playerScore++;
 		const p = document.createElement("p");
 		p.innerText = "You won! Paper covers rock";
+		outcomeDiv.appendChild(p);
 	}
 };
 
