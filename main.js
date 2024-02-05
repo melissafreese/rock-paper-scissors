@@ -5,6 +5,7 @@ const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
 const outcomeDiv = document.querySelector(".outcome");
+const playerScoreSpan = document.querySelector('p')
 
 const computerPlay = () => {
 	const arrOfChoices = ["rock", "paper", "scissors"];
