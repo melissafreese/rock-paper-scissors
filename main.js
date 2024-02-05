@@ -55,11 +55,13 @@ const checkForWinner = (playerScore, compScore) => {
 		const h2 = document.createElement("h2");
 		h2.classList.add("player-won");
 		h2.innerText = `You won ${playerScore} to ${compScore}. Great Job!`;
+		outcomeDiv.appendChild(h2);
 	}
 	if (compScore === 5) {
 		const h2 = document.createElement("h2");
 		h2.classList.add("computer-won");
 		h2.innerText = `You lost ${playerScore} to ${compScore}. Better luck next time!`;
+		outcomeDiv.appendChild(h2);
 	}
 };
 
