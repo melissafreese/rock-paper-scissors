@@ -50,7 +50,13 @@ const playRound = (playerSelection, computerSelection) => {
 	}
 };
 
-
+const checkForWinner = (playerScore, compScore) => {
+	if (playerScore === 5) {
+		const h2 = document.createElement('h2')
+		h2.innerText = `You won ${playerScore} to ${computerScore}. Great Job!`
+	} else (compScore === 5)
+	
+}
 
 rockButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
