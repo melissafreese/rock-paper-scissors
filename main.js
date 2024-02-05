@@ -54,12 +54,12 @@ const checkForWinner = (playerScore, compScore) => {
 	if (playerScore === 5) {
 		const h2 = document.createElement("h2");
 		h2.classList.add("player-won");
-		h2.innerText = `You won ${playerScore} to ${computerScore}. Great Job!`;
+		h2.innerText = `You won ${playerScore} to ${compScore}. Great Job!`;
 	}
 	if (compScore === 5) {
 		const h2 = document.createElement("h2");
 		h2.classList.add("computer-won");
-		h2.innerText = `You lost ${playerScore} to ${computerScore}. Better luck next time!`;
+		h2.innerText = `You lost ${playerScore} to ${compScore}. Better luck next time!`;
 	}
 };
 
@@ -67,19 +67,19 @@ rockButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
 	const playerSelection = "rock";
 	playRound(playerSelection, computerSelection);
-	checkForWinner(playerScore, computerScore);
+	checkForWinner(playerScore, compScore);
 });
 
 paperButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
 	const playerSelection = "paper";
 	playRound(playerSelection, computerSelection);
-	checkForWinner(playerScore, computerScore);
+	checkForWinner(playerScore, compScore);
 });
 
 scissorsButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
 	const playerSelection = "scissors";
 	playRound(playerSelection, computerSelection);
-	checkForWinner(playerScore, computerScore);
+	checkForWinner(playerScore, compScore);
 });
