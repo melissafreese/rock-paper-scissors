@@ -1,4 +1,6 @@
 let compScore = 0;
+let playerScore = 0;
+
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".paper");
 const scissorsButton = document.querySelector(".scissors");
@@ -47,6 +49,8 @@ const playRound = (playerSelection, computerSelection) => {
 		outcomeDiv.appendChild(p);
 	}
 };
+
+
 
 rockButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
