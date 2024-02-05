@@ -71,6 +71,8 @@ rockButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
 	const playerSelection = "rock";
 	playRound(playerSelection, computerSelection);
+	playerScoreSpan.innerText = `${playerScore}`;
+	computerScoreSpan.innerText = `${compScore}`;
 	checkForWinner(playerScore, compScore);
 });
 
@@ -78,6 +80,8 @@ paperButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
 	const playerSelection = "paper";
 	playRound(playerSelection, computerSelection);
+	playerScoreSpan.innerText = `${playerScore}`;
+	computerScoreSpan.innerText = `${compScore}`;
 	checkForWinner(playerScore, compScore);
 });
 
@@ -85,5 +89,7 @@ scissorsButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
 	const playerSelection = "scissors";
 	playRound(playerSelection, computerSelection);
+	playerScoreSpan.innerText = `${playerScore}`;
+	computerScoreSpan.innerText = `${compScore}`;
 	checkForWinner(playerScore, compScore);
 });
