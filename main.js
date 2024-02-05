@@ -1,7 +1,14 @@
+let compScore = 0;
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".button");
 const scissorsButton = document.querySelector(".scissors");
 const outcomeDiv = document.querySelector(".outcome");
+
+const computerPlay = () => {
+	const arrOfChoices = ['rock', 'paper', 'scissors']
+	const randomNum = Math.floor(Math.random() * arrOfChoices.length)
+	return arrOfChoices[randomNum];
+};
 
 function getComputerChoice() {
 	let choice = ["Rock", "Paper", "Scissors"];
@@ -10,7 +17,12 @@ function getComputerChoice() {
 	console.log(randomRPS);
 }
 const playRound = (playerSelection, computerSelection) => {
-	if (playerSelection == "Rock" && computerSelection == "Paper")
+	if (playerSelection === computerSelection) {
+		const p = document.createElement('p');
+		p.innerText = `You tied! You both picked ${playerSelection}`
+	};
+
+	(playerSelection == "Rock" && computerSelection == "Paper")
 		return "You lose! Paper beats rock";
 	else if (playerSelection == "Rock" && computerSelection == "Scissors")
 		return "You win! Rock beats Scissors";
