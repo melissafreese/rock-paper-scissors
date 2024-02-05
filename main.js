@@ -52,5 +52,3 @@ scissorsButton.addEventListener("click", () => {
 	const playerSelection = "scissors";
 	playRound(playerSelection, computerSelection);
 });
-
-game();
