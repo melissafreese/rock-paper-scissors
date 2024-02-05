@@ -23,7 +23,7 @@ const playRound = (playerSelection, computerSelection) => {
 		p.innerText = "You lost! Rock crushes scissors";
 		outcomeDiv.appendChild(p);
 	} else if (playerSelection === "scissors" && computerSelection === "paper") {
-		playerscore++;
+		playerScore++;
 		const p = document.createElement("p");
 		p.innerText = "You won! Scissors cuts paper";
 		outcomeDiv.appendChild(p);
