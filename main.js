@@ -25,13 +25,13 @@ const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 
 function game() {
-	for (let i = 0; i < 5; i++) {
-		let playerSelection = prompt(
-			"Enter Rock, Paper or Scissors - CaseSensitive"
-		);
-		let computerSelection = getComputerChoice();
-		console.log(playRound(playerSelection, computerSelection));
-	}
+	// for (let i = 0; i < 5; i++) {
+	// 	let playerSelection = prompt(
+	// 		"Enter Rock, Paper or Scissors - CaseSensitive"
+	// 	);
+	// 	let computerSelection = getComputerChoice();
+	// 	console.log(playRound(playerSelection, computerSelection));
+	// }
 }
 
 game();
