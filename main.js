@@ -5,44 +5,35 @@ const scissorsButton = document.querySelector(".scissors");
 const outcomeDiv = document.querySelector(".outcome");
 
 const computerPlay = () => {
-	const arrOfChoices = ['rock', 'paper', 'scissors']
-	const randomNum = Math.floor(Math.random() * arrOfChoices.length)
+	const arrOfChoices = ["rock", "paper", "scissors"];
+	const randomNum = Math.floor(Math.random() * arrOfChoices.length);
 	return arrOfChoices[randomNum];
 };
 
 const playRound = (playerSelection, computerSelection) => {
 	if (playerSelection === computerSelection) {
-		const p = document.createElement('p');
-		p.innerText = `You tied! You both picked ${playerSelection}`
-	};
-
-	(playerSelection == "Rock" && computerSelection == "Paper")
-		return "You lose! Paper beats rock";
-	else if (playerSelection == "Rock" && computerSelection == "Scissors")
-		return "You win! Rock beats Scissors";
-	else if (playerSelection == "Rock" && computerSelection == "Rock")
-		return "It's a tie!";
-	else if (playerSelection == "Paper" && computerSelection == "Paper")
-		return "It's a tie!";
-	else if (playerSelection == "Paper" && computerSelection == "Scissors")
-		return "You lose! Scissors beats Paper";
-	else if (playerSelection == "Scissors" && computerSelection == "Scissors")
-		return "It's a tie!";
-}
-
-const playerSelection = "Rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
-
-function game() {
-	// for (let i = 0; i < 5; i++) {
-	// 	let playerSelection = prompt(
-	// 		"Enter Rock, Paper or Scissors - CaseSensitive"
-	// 	);
-	// 	let computerSelection = getComputerChoice();
-	// 	console.log(playRound(playerSelection, computerSelection));
-	// }
-}
+		const p = document.createElement("p");
+		p.innerText = `You tied! You both picked ${playerSelection}`;
+	} else if (playerSelection === "scissors" && computerSelection === "rock") {
+		compScore++;
+		return "You lost! Rock crushes scissors";
+	} else if (playerSelection === "scissors" && computerSelection === "paper") {
+		playerscore++;
+		return " You won! Scissors cuts paper";
+	} else if (playerSelection === "rock" && computerSelection === "paper") {
+		compScore++;
+		return "You lost! Paper covers rock";
+	} else if (playerSelection === "rock" && computerSelection === "scissors") {
+		playerScore++;
+		return "You won! Rock crushed scissors";
+	} else if (playerSelection === "paper" && computerSelection === "scissors") {
+		compScore++;
+		return "You lost! Scissors cuts paper";
+	} else if (playerSelection === "paper" && computerSelection === "rock") {
+		playerScore++;
+		return "You won! Paper covers rock";
+	}
+};
 
 rockButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
