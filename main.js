@@ -1,6 +1,7 @@
 const rockButton = document.querySelector(".rock");
 const paperButton = document.querySelector(".button");
 const scissorsButton = document.querySelector(".scissors");
+const outcomeDiv = document.querySelector(".outcome");
 
 function getComputerChoice() {
 	let choice = ["Rock", "Paper", "Scissors"];
@@ -8,7 +9,7 @@ function getComputerChoice() {
 	return randomRPS;
 	console.log(randomRPS);
 }
-function playRound(playerSelection, computerSelection) {
+const playRound = (playerSelection, computerSelection) => {
 	if (playerSelection == "Rock" && computerSelection == "Paper")
 		return "You lose! Paper beats rock";
 	else if (playerSelection == "Rock" && computerSelection == "Scissors")
