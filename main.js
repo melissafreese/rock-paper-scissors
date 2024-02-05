@@ -67,6 +67,11 @@ const checkForWinner = (playerScore, compScore) => {
 	}
 };
 
+const updateScores = (playerScore, compScore) => {
+	playerScoreSpan.innerText = `${playerScore}`;
+	computerScoreSpan.innerText = `${compScore}`;
+};
+
 rockButton.addEventListener("click", () => {
 	const computerSelection = computerPlay();
 	const playerSelection = "rock";
