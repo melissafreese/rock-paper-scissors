@@ -44,7 +44,7 @@ const playRound = (playerSelection, computerSelection) => {
 		const p = document.createElement("p");
 		p.innerText = "You lost! Scissors cuts paper";
 		outcomeDiv.appendChild(p);
-	} else if (playerSelection === "paper" && computerSelection === "rock") {
+	} else (playerSelection === "paper" && computerSelection === "rock") {
 		playerScore++;
 		const p = document.createElement("p");
 		p.innerText = "You won! Paper covers rock";
